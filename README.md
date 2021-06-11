@@ -35,5 +35,5 @@ Re-watch YouTube stream for Lesson 4 ML Best practices [here](https://youtu.be/J
 Re-watch YouTube stream for Lesson 5 Capstone results [here](https://youtu.be/aLReepA68Nk)
 
 ## Credits
-This workshop was set up by @pyladiesams and @EzheZhezhe
+This bootcamp was set up by @pyladiesams and @EzheZhezhe
 
