@@ -1,4 +1,4 @@
-# Welcome to Python Bootcamp Bringing ML models into production
+# Welcome to Python Bootcamp: Bringing ML models into production
  
 ## Bootcamp description
 6 week-long hands-on Python Bootcamp following a real-life industry scenario. Teaser: it’s all about energy :)
