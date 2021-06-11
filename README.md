@@ -28,11 +28,11 @@ In this repository you will find:
 - deployments in different programming languages than Python
 
 ## Video records
-Re-watch YouTube stream for Lesson 1 Introduction [here](https://youtu.be/irwDv_wDyQc)
-Re-watch YouTube stream for Lesson 2 Batch deployment [here](https://youtu.be/G1qxR1Hi3i8)
-Re-watch YouTube stream for Lesson 3 Near real-time deployment [here](https://youtu.be/O7hfLDMizyA)
-Re-watch YouTube stream for Lesson 4 ML Best practices [here](https://youtu.be/J2XgPmsTfGU)
-Re-watch YouTube stream for Lesson 5 Capstone results [here](https://youtu.be/aLReepA68Nk)
+- Re-watch YouTube stream for Lesson 1 Introduction [here](https://youtu.be/irwDv_wDyQc)
+- Re-watch YouTube stream for Lesson 2 Batch deployment [here](https://youtu.be/G1qxR1Hi3i8)
+- Re-watch YouTube stream for Lesson 3 Near real-time deployment [here](https://youtu.be/O7hfLDMizyA)
+- Re-watch YouTube stream for Lesson 4 ML Best practices [here](https://youtu.be/J2XgPmsTfGU)
+- Re-watch YouTube stream for Lesson 5 Capstone results [here](https://youtu.be/aLReepA68Nk)
 
 ## Credits
 This bootcamp was set up by @pyladiesams and @EzheZhezhe
