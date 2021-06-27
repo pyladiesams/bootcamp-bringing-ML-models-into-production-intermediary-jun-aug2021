@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# delete native Mac artifacts
+.DS_Store
+
+# vscode artifacts
+.vscode
