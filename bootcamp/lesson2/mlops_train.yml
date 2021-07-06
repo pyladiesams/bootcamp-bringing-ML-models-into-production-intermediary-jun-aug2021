@@ -1,0 +1,14 @@
+name: mlops_train
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - ipykernel
+  - matplotlib
+  - pandas
+  - scipy
+  - scikit-learn
+  - pip:
+    - azureml-core
+    - azureml-dataset-runtime
