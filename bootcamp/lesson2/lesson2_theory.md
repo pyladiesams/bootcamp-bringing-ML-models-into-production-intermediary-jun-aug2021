@@ -56,26 +56,28 @@ python -s -m ipykernel install --user --name=mlops_train
 ## 1. Deployment setup
 
 ### Data preparations
-EDA takes place locally, datasets registration - on Azure. Open [data preparation notebook](data_preparation.ipynb) and follow the steps.
+EDA takes place locally, datasets registration - on Azure. Open [data preparation notebook](prepare_data.ipynb) and follow the steps.
 
 ### Model training
-Model training takes place locally, experiment tracking - on Azure. Open [linear regression model training notebook](lr_model_training.ipynb) and follow the steps.
+Model training takes place locally, experiment tracking - on Azure. Open [linear regression model training notebook](train_linreg_model.ipynb) and follow the steps.
 
 ### Model evaluation and registration
 Model evaluation takes place locally, experiment tracking and registration - on Azure. After finalizing model training run
 ```
 python evaluate_model.py <your model name>
 ```
-Open [Forecast output exploration notebook](forecast_output_explorations.ipynb) and follow the steps. To register the model of choice run
+Open [predictions exploration notebook](explore_predictions.ipynb) and follow the steps.
+
+To register the model of choice run
 ```
-az ml model register -n <your model name> --experiment-name <your experiment name> --model-framework <your model framework> -p <path to your pkl>
+az ml model register -n <your model name> --model-framework <your model framework> -p <path to your pkl>
 ```
 
 ---
 ## 2. Batch inference on Azure
 
 ### Prepare files for batch inference
-Batch data prepararion takes place locally, batch files registration - on Azure. Open [generate batch data notebook](generate_batch_data.ipynb) and follow the steps.
+For the sake of this usecase we prepare data for batch inferencing locally, batch files registration - on Azure. Open [generate batch data notebook](generate_batch_data.ipynb) and follow the steps.
 
 ### Scoring script
 Batch inferencing service requires a scoring script to load the model and use it to predict new values. It must include two functions:
@@ -86,7 +88,7 @@ Typically, you use the init function to load the model from the model registry, 
 
 We will create this script in the next step.
 
-### Setup and schedule Azure Machine Learning Pipeline
+### Setup and schedule Batch Azure Machine Learning Pipeline
 Azure Machine Learning provides a type of pipeline step specifically for performing parallel batch inferencing. Using the **ParallelRunStep class**, you can read batches of files from a File dataset and write the processing output to a **OutputFileDatasetConfig**.
 
 Open [create batch pipeline notebook](create_batch_pipeline.ipynb) and follow the steps.
