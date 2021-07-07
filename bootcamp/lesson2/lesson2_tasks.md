@@ -10,43 +10,41 @@ The goal of this lesson is to learn more about:
 - Batch inference on Azure
 
 ---
-## 1. Register ML model
+## Exercise 1: Register ML model
 ### Steps
 
-1. Register a new version of the same model via cli
-2. Register another model via cli
-3. Optional (register another model via Python script)
+1. Register the same model via cli
+2. Register the same model via Python script by using Model.register method
+3. (Optional) Register the same model via Python script by using run.register method
 
 ---
-## 2. Attach and remove AML cluster
-
-### Steps
-
-1. Choose more powerful AML cluster and attach it to the workspace via cli
-2. Remove this AML cluster from the current workspace via CLI
-3. Optional (attach and remove AML cluster via Python script)
-
----
-## 3. Schedule Azure Machine Learning pipeline
+## Exercise 2: Attach and remove inference cluster
 
 ### Steps
 
-1. Schedule the pipeline to run every day at 08:00 in the morning
-2. Schedule the pipelune to run every 3 days at 13:00
-3. Optional (schedule pipeline via ....TODO)
+1. Attach an inference cluster via Python script
+2. Remove this inference cluster via CLI
+3. Optional (Remove this inference cluster via Python script)
 
 ---
-## 4. Homework
+## Exercise 3: Schedule Azure Machine Learning pipeline
+
+### Steps
+
+1. Schedule the pipeline to run every Wednesday at 08:00 in the morning
+2. Schedule the pipeline to run every day at 13:00
+3. Optional (Schedule the pipelune to run every 3 days at 13:00)
+
+---
+## 4. Home assignment
 
 **Goal**
 
 Get hands-on experience with machine learning buidling blocks and batch inference on Azure
 
-1. Follow the steps in Deployment setup to train, evaluate and register Ridge model.
-2. Follow the steps in Batch inference on Azure to setup and schedule Azure Machine Learning pipeline
+1. Open [Ridge model training notebook](ridge_model_training.ipynb) and follow the steps to train Ridge model
+2. Evaluate and register trained Ridge model.
+3. Follow the steps in Batch inference on Azure to setup and schedule Azure Machine Learning pipeline to run every day.
 
-
----
-## 5. Reading materials (optional)
-
-//TODO Add materials
+___
+IMPORTANT: Remove inference cluster after you have finished your exercises!!!

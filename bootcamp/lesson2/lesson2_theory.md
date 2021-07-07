@@ -38,7 +38,7 @@ az ml workspace create -w mlops -g mlops_bootcamp
 ```
 az ml workspace list --query '[0]' > config.json
 ```
-6. Manually update config.json to correspond to Python Workspace class requirements:
+6. Manually update config.json to correspond with Python Workspace class requirements:
 - open config.json
 - replace "resourceGroup" with "resource_group"
 - replace "subscriptionId" with "subscription_id"
@@ -56,43 +56,40 @@ python -s -m ipykernel install --user --name=mlops_train
 ## 1. Deployment setup
 
 ### Data preparations
-EDA takes place locally, datasets registration - on Azure.
-
-Open [data preparation notebook](data_preparation.ipynb) and follow the steps.
+EDA takes place locally, datasets registration - on Azure. Open [data preparation notebook](data_preparation.ipynb) and follow the steps.
 
 ### Model training
-Model training takes place locally, experiment tracking - on Azure.
-
-Open [LR model training notebook](lr_model_training.ipynb) and follow the steps.
-
-Open [Ridge model training notebook](ridge_model_training.ipynb) and follow the steps.
+Model training takes place locally, experiment tracking - on Azure. Open [linear regression model training notebook](lr_model_training.ipynb) and follow the steps.
 
 ### Model evaluation and registration
-Model evaluation takes place locally, experiment tracking and registration - on Azure.
-
-After finalizing model training run
+Model evaluation takes place locally, experiment tracking and registration - on Azure. After finalizing model training run
 ```
-python evaluate_model.py linear_regression
-python evaluate_model.py ridge
+python evaluate_model.py <your model name>
 ```
-Open [Forecast output exploration notebook](forecast_output_explorations.ipynb) and follow the steps.
-
-To register the model of choice run
+Open [Forecast output exploration notebook](forecast_output_explorations.ipynb) and follow the steps. To register the model of choice run
 ```
-az ml model register -n linear_regression --experiment-name Evaluation --model-framework ScikitLearn -p <path to your pkl>
+az ml model register -n <your model name> --experiment-name <your experiment name> --model-framework <your model framework> -p <path to your pkl>
 ```
 
 ---
 ## 2. Batch inference on Azure
 
+### Prepare files for batch inference
+Batch data prepararion takes place locally, batch files registration - on Azure. Open [generate batch data notebook](generate_batch_data.ipynb) and follow the steps.
+
 ### Scoring script
-TODO
+Batch inferencing service requires a scoring script to load the model and use it to predict new values. It must include two functions:
+- init(): Called when the pipeline is initialized.
+- run(mini_batch): Called for each batch of data to be processed.
 
-### conda.yml for inference
-TODO
+Typically, you use the init function to load the model from the model registry, and use the run function to generate predictions from each batch of data and return the results.
 
-### Setup AML compute
-TODO
+We will create this script in the next step.
 
-### Setup Azure Machine Learning Pipeline
-TODO
+### Setup and schedule Azure Machine Learning Pipeline
+Azure Machine Learning provides a type of pipeline step specifically for performing parallel batch inferencing. Using the **ParallelRunStep class**, you can read batches of files from a File dataset and write the processing output to a **OutputFileDatasetConfig**.
+
+Open [create batch pipeline notebook](create_batch_pipeline.ipynb) and follow the steps.
+
+___
+IMPORTANT: Remove inference cluster if you do not plan to work on exercises immediately!!!
