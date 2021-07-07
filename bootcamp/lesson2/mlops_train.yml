@@ -11,4 +11,6 @@ dependencies:
   - scikit-learn
   - pip:
     - azureml-core
-    - azureml-dataset-runtime
+    - azureml-dataset-runtime[fuse]
+    - azureml-pipeline-core
+    - azureml-pipeline-steps

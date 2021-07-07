@@ -31,9 +31,10 @@ The goal of this lesson is to learn more about:
 
 ### Steps
 
-1. Schedule the pipeline to run every Wednesday at 08:00 in the morning
-2. Schedule the pipeline to run every day at 13:00
-3. Optional (Schedule the pipelune to run every 3 days at 13:00)
+1. Schedule the pipeline to run every Wednesday at 08:00 in the morning via Python Script
+2. Schedule the pipeline to run every day at 13:00 via Python Script
+3. Deactivate the scheduled pipeline via Python Script
+4. Optional (Explore other possible steps in the pipeline)
 
 ---
 ## 4. Home assignment
@@ -45,6 +46,3 @@ Get hands-on experience with machine learning buidling blocks and batch inferenc
 1. Open [Ridge model training notebook](ridge_model_training.ipynb) and follow the steps to train Ridge model
 2. Evaluate and register trained Ridge model.
 3. Follow the steps in Batch inference on Azure to setup and schedule Azure Machine Learning pipeline to run every day.
-
-___
-IMPORTANT: Remove inference cluster after you have finished your exercises!!!

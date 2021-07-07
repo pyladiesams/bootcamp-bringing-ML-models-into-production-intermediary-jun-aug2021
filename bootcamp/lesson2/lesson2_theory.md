@@ -91,5 +91,7 @@ Azure Machine Learning provides a type of pipeline step specifically for perform
 
 Open [create batch pipeline notebook](create_batch_pipeline.ipynb) and follow the steps.
 
-___
-IMPORTANT: Remove inference cluster if you do not plan to work on exercises immediately!!!
+---
+## 3. Reading materials (optional)
+- [Manage costs for Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-plan-manage-cost)
+- [Compute targets in Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-compute-target)
