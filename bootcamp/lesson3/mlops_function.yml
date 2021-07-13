@@ -1,0 +1,6 @@
+name: mlops_function
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+
