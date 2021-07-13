@@ -53,9 +53,7 @@ try:
     cpu_cluster = ComputeTarget(workspace=ws, name=cpu_cluster_name)
     print('Found existing cluster, use it.')
 except ComputeTargetException:
-    # To use a different region for the compute, add a location='<region>' parameter
-    compute_config = AmlCompute.provisioning_configuration(vm_size='STANDARD_D2_V2',
-                                                           max_nodes=4)
+    compute_config = AmlCompute.provisioning_configuration(vm_size='STANDARD_D2_V2', max_nodes=4)
     cpu_cluster = ComputeTarget.create(ws, cpu_cluster_name, compute_config)
 
 cpu_cluster.wait_for_completion(show_output=True)
@@ -87,19 +85,19 @@ cpu_cluster.delete()
 
 1. Schedule the pipeline to run every Wednesday at 08:00 in the morning via Python Script
 ```
-
-
-
+from azureml.core import Workspace
+from azureml.pipeline.core import ScheduleRecurrence, Schedule
 ws = Workspace.from_config()
+
 <retieve the id of the published pipeline and assign it to pipeline_id>
 
 weekly_wed_morning = ScheduleRecurrence(frequency='Week', interval=1,
-                                        week_days="Wednesday", time_of_day="08:00")
-pipeline_schedule = Schedule.create(ws, name='Weekly Morning Predictions',
-                                        description='batch inferencing',
-                                        pipeline_id=<the ID of the pipeline the schedule will submit - str>,
-                                        experiment_name='Batch_Prediction',
-                                        recurrence=weekly_wed_morning)
+        week_days="Wednesday", time_of_day="08:00")
+pipeline_schedule = Schedule.create(ws,
+        name='Weekly Morning Predictions',description='batch inferencing',
+        pipeline_id=<the ID of the pipeline the schedule will submit - str>,
+        experiment_name='Batch_Prediction',
+        recurrence=weekly_wed_morning)
 ```
 2. Schedule the pipeline to run every day at 13:00 via Python Script
 ```
@@ -110,11 +108,12 @@ ws = Workspace.from_config()
 <retieve the id of the published pipeline and assign it to pipeline_id>
 
 daily = ScheduleRecurrence(frequency='Day', interval=1, time_of_day="13:00")
-pipeline_schedule = Schedule.create(ws, name='Daily Noon Predictions',
-                                        description='batch inferencing',
-                                        pipeline_id=<the ID of the pipeline the schedule will submit - str>,
-                                        experiment_name='Batch_Prediction',
-                                        recurrence=daily)
+pipeline_schedule = Schedule.create(ws,
+        name='Daily Noon Predictions',
+        description='batch inferencing',
+        pipeline_id=<the ID of the pipeline the schedule will submit - str>,
+        experiment_name='Batch_Prediction',
+        recurrence=daily)
 ```
 3. Deactivate the scheduled pipeline via Python Script
 ```
