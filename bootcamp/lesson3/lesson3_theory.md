@@ -114,6 +114,14 @@ DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02x
 ```
 "StorageConnectionString": "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;QueueEndpoint=http://127.0.0.1:10001/devstoreaccount1;"
 ```
+- activate virtual environment in `mlops_function` conda env
+```
+# on bash/zsh
+source .venv/bin/activate
+
+# on Windows (not in git bash)
+.venv\Scripts\activate.bat
+```
 - start the function locally and test it by uploading sample.dat file to `predictions-input` in Local Emulator
 ```
 cd blob_function
