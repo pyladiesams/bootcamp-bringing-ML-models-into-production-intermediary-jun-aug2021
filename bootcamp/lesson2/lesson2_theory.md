@@ -24,15 +24,19 @@ List all locations to find the name of your location
 az account list-locations -o table
 ```
 ```
-az group create --name mlops_bootcamp --location <your location name here>
+az group create \
+--name mlops_bootcamp \
+--location <your location name here>
 ```
-3. Install Azure ML cli v1.0
+3. Install Azure ML cli v1.0 if it is not installed
 ```
 az extension add -n azure-cli-ml
 ```
 4. Provision Azure Machine Learning including Azure Storage Account, Azure Application Insights, Azure Key Vault
 ```
-az ml workspace create -w mlops -g mlops_bootcamp
+az ml workspace create \
+-w mlops \
+-g mlops_bootcamp
 ```
 5. Save Workspace config to your file. In our case we have only 1 workspace, that's why we pick the first element of the list.
 ```
@@ -70,7 +74,10 @@ Open [predictions exploration notebook](explore_predictions.ipynb) and follow th
 
 To register the model of choice run
 ```
-az ml model register -n <your model name> --model-framework <your model framework> -p <path to your pkl>
+az ml model register \
+-n <your model name> \
+--model-framework <your model framework> \
+-p <path to your pkl>
 ```
 
 ---
