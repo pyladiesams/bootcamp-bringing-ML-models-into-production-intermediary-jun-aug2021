@@ -11,9 +11,12 @@ The goal of this lesson is to share ML Best Practices
 ## ML Best Practices
 
 **Scope**
-- define main goal
-- hypothesize solutions (visualize, understand, design)
-- end to end MVP iterations (rule based, ML modeling)
+- define the main goal
+- ML solution development:
+    - visualize an ideal solution without any constraints
+    - understand how the problem is solved
+    - design with constraints in mind
+- end to end MVP iterations
 
 **Code structure**
 - notebooks vs modular code
@@ -32,8 +35,8 @@ The goal of this lesson is to share ML Best Practices
 **Pipelines**
 - DataOps (get, join, validate, prepare, split, feature engineering)
 - Model training
-- Model evaluation (tradeoffs: performance, latency, size, compute, interpretability, bias checks, time to develop, time to retrain, maintenance overhead)
+- Model evaluation (trade offs: performance, latency, size, compute, interpretability, bias checks, time to develop, time to retrain, maintenance overhead)
 - Model deployment
 
 **ML system monitoring**
-- Model monitoring (system health, model performance (data drift, target drift, concept drift; locate drift, measure drift, outliers; monitoring solution (alert, inspect, act))
+- Model monitoring (system health, model performance (data drift, feature drift, concept drift; locate drift, measure drift, outliers; monitoring solution (alert, inspect, act))
