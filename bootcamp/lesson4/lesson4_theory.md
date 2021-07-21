@@ -20,23 +20,31 @@ The goal of this lesson is to share ML Best Practices
 
 **Code structure**
 - notebooks vs modular code
-- venv, conda, pinned libraries
+- venv, conda - pin the libraries, use docker
 - docs, type hinting, pre-commit
 - print vs logging, error handling
-- sys, argparse, configargparse, CLI
-- versioning
+- sys, argparse, configargparse, click, typer
 - automation
 
 **Tests**
 - unit, integration, functional, regression tests
-- data-specific tests (rows/cols, individual values, aggregate values) - great expectations to test the validity of the data
-- model-specific tests (shapes and values of model output, important metrics: overall, per-class, slices, behavioral testing; loading artefacts, prediction, testing and benchmarking the tradeoffs)
+- data-specific tests - check the validity of your data with [great expectations](https://greatexpectations.io/)
+- model-specific tests (shapes and values of model output, metrics, loading artefacts, inference)
 
 **Pipelines**
-- DataOps (get, join, validate, prepare, split, feature engineering)
+- DataOps (get data, join, validate, prepare, split, feature engineering)
 - Model training
-- Model evaluation (trade offs: performance, latency, size, compute, interpretability, bias checks, time to develop, time to retrain, maintenance overhead)
-- Model deployment
+- Model evaluation (performance, latency, size, compute, interpretability, bias, time to develop, time to retrain, maintenance overhead)
+- Model deployment (build, release pipelines)
 
 **ML system monitoring**
-- Model monitoring (system health, model performance (data drift, feature drift, concept drift; locate drift, measure drift, outliers; monitoring solution (alert, inspect, act))
+- overall MLsystem health
+- model performance (data drift, feature drift, concept drift)
+- monitoring solution (alert, inspect, act)
+
+---
+
+Reading materials:
+- [Calm Code](https://calmcode.io/)
+- [ML Test Score](https://research.google/pubs/pub46555/)
+- [Data and concept drift](https://towardsdatascience.com/machine-learning-in-production-why-you-should-care-about-data-and-concept-drift-d96d0bc907fb)
