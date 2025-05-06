@@ -1,11 +1,11 @@
 # Welcome to Python Bootcamp: **Bringing ML models into production**
 
 ## Bootcamp description
-It's a 6 week-long [PyLadies Amsterdam](https://amsterdam.pyladies.com/) Python hands-on Bootcamp following a real-life industry scenario (presented by [Dexter](https://dexterenergy.ai/)). Teaser: it’s all about energy :)
+It's a 6-week-long [PyLadies Amsterdam](https://amsterdam.pyladies.com/) Python hands-on Bootcamp following a real-life industry scenario (presented by [Dexter](https://dexterenergy.ai/)). Teaser: it’s all about energy :)
 
 After finishing this bootcamp you will know more about:
 * machine learning project lifecycle building blocks
-* machine learning model deployments scenarios
+* machine learning model deployment scenarios
 * how to prepare your machine learning model for deployment
 * hands-on with batch and real-time serverless deployments on Azure
 * best practices, common mistakes to avoid during the deployment process
@@ -26,7 +26,7 @@ In this repository you will find:
 
 ## Out of the scope
 - deep learning model deployments
-- deployments in different programming languages than Python
+- deployments in programming languages other than Python
 
 ## Video records
 Watch the lesson videos on the [PyLadies Amsterdam YouTube channel](https://youtube.com/pyladiesamsterdam) and subscribe :P
@@ -37,4 +37,4 @@ Watch the lesson videos on the [PyLadies Amsterdam YouTube channel](https://yout
 - Capstone results [here](https://youtu.be/aLReepA68Nk)
 
 ## Credits
-This bootcamp was set up by @pyladiesams and @EzheZhezhe
+This bootcamp was set up by @pyladiesams and @una-gal
